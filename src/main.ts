@@ -132,3 +132,26 @@ const activarProtocoloUrgencia = (pacientes: Pacientes[]): boolean => {
 };
 
 console.log(activarProtocoloUrgencia(pacientes));
+
+// Apartado 3
+
+const reasignaPacientesAMedicoFamilia = (
+  pacientes: Pacientes[]
+): Pacientes[] => {
+  const nuevaLista: Pacientes[] = [];
+
+  for (let i = 0; i < pacientes.length; i++) {
+    if (pacientes[i].especialidad === "Pediatra") {
+      nuevaLista.push({
+        ...pacientes[i],
+        especialidad: "Medico de familia",
+      });
+    } else {
+      nuevaLista.push(pacientes[i]);
+    }
+  }
+
+  return nuevaLista;
+};
+
+console.log(reasignaPacientesAMedicoFamilia(pacientes));
