@@ -155,3 +155,18 @@ const reasignaPacientesAMedicoFamilia = (
 };
 
 console.log(reasignaPacientesAMedicoFamilia(pacientes));
+
+// Apartado 4
+
+const HayPacientesDePediatria = (pacientes: Pacientes[]): boolean => {
+  let pediatraACasa = false;
+  for (let i = 0; i < pacientes.length; i++) {
+    if (pacientes[i].especialidad === "Pediatra") {
+      pediatraACasa = true;
+      break;
+    }
+  }
+  return pediatraACasa;
+};
+
+console.log(HayPacientesDePediatria(pacientes));
