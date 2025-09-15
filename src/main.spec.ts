@@ -3,7 +3,6 @@ import {
   obtenPacientesAsignadorApediatria,
   obtenPacientesAsignadosAPediatriaYMenorDeDiezAnios,
   activarProtocoloUrgencia,
-  reasignaPacientesAMedicoFamilia,
   HayPacientesDePediatria,
 } from "./main";
 

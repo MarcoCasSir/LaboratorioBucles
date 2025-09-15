@@ -179,7 +179,7 @@ interface NumeroPacientesPorEspecialidad {
   cardiologia: number;
 }
 
-const cuentaPacientesPorEspecialidad = (
+export const cuentaPacientesPorEspecialidad = (
   pacientes: Pacientes[]
 ): NumeroPacientesPorEspecialidad => {
   let sumaMedicofamilia = 0;
