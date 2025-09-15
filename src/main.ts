@@ -2,7 +2,7 @@ import "./style.css";
 
 type Especialidad = "Medico de familia" | "Pediatra" | "Cardiólogo";
 
-interface Pacientes {
+export interface Pacientes {
   id: number;
   nombre: string;
   apellidos: string;
@@ -13,7 +13,7 @@ interface Pacientes {
   edad: number;
 }
 
-const pacientes: Pacientes[] = [
+export const pacientes: Pacientes[] = [
   {
     id: 1,
     nombre: "John",
@@ -79,7 +79,7 @@ const pacientes: Pacientes[] = [
 // Apartado 1
 // (A) LISTA DE PACIENTES CON ESPECIALIDAD PEDIATRA
 
-const obtenPacientesAsignadorApediatria = (
+export const obtenPacientesAsignadorApediatria = (
   pacientes: Pacientes[]
 ): Pacientes[] => {
   const pacientesPediatria: Pacientes[] = [];
@@ -96,7 +96,7 @@ console.log(obtenPacientesAsignadorApediatria(pacientes));
 
 // (B) LISTA DE PACIENTEs CON EDAD MENOR DE 10 AÑOS
 
-const obtenPacientesAsignadosAPediatriaYMenorDeDiezAnios = (
+export const obtenPacientesAsignadosAPediatriaYMenorDeDiezAnios = (
   pacientes: Pacientes[]
 ): Pacientes[] => {
   const menoresPedriatia: Pacientes[] = [];
@@ -115,7 +115,7 @@ console.log(obtenPacientesAsignadosAPediatriaYMenorDeDiezAnios(pacientes));
 // Apartado 2
 // Activar protocolo de URGENCIA
 
-const activarProtocoloUrgencia = (pacientes: Pacientes[]): boolean => {
+export const activarProtocoloUrgencia = (pacientes: Pacientes[]): boolean => {
   let activarProtocolo = false;
 
   for (let i = 0; i < pacientes.length; i++) {
@@ -135,7 +135,7 @@ console.log(activarProtocoloUrgencia(pacientes));
 
 // Apartado 3
 
-const reasignaPacientesAMedicoFamilia = (
+export const reasignaPacientesAMedicoFamilia = (
   pacientes: Pacientes[]
 ): Pacientes[] => {
   const nuevaLista: Pacientes[] = [];
@@ -158,7 +158,7 @@ console.log(reasignaPacientesAMedicoFamilia(pacientes));
 
 // Apartado 4
 
-const HayPacientesDePediatria = (pacientes: Pacientes[]): boolean => {
+export const HayPacientesDePediatria = (pacientes: Pacientes[]): boolean => {
   let pediatraACasa = false;
   for (let i = 0; i < pacientes.length; i++) {
     if (pacientes[i].especialidad === "Pediatra") {
