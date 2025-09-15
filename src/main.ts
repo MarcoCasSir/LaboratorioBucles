@@ -170,3 +170,44 @@ const HayPacientesDePediatria = (pacientes: Pacientes[]): boolean => {
 };
 
 console.log(HayPacientesDePediatria(pacientes));
+
+// Apartado 5
+
+interface NumeroPacientesPorEspecialidad {
+  medicoDeFamilia: number;
+  pediatria: number;
+  cardiologia: number;
+}
+
+const cuentaPacientesPorEspecialidad = (
+  pacientes: Pacientes[]
+): NumeroPacientesPorEspecialidad => {
+  let sumaMedicofamilia = 0;
+  let sumaPediatra = 0;
+  let sumaCardiologia = 0;
+
+  for (let i = 0; i < pacientes.length; i++) {
+    switch (pacientes[i].especialidad) {
+      case "Medico de familia":
+        sumaMedicofamilia++;
+        break;
+
+      case "Pediatra":
+        sumaPediatra++;
+        break;
+      case "Cardiólogo":
+        sumaCardiologia++;
+        break;
+    }
+  }
+
+  const totales: NumeroPacientesPorEspecialidad = {
+    medicoDeFamilia: sumaMedicofamilia,
+    pediatria: sumaPediatra,
+    cardiologia: sumaCardiologia,
+  };
+
+  return totales;
+};
+
+console.log(cuentaPacientesPorEspecialidad(pacientes));
